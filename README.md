@@ -57,7 +57,7 @@ npm run dev
 
 ## Demo
 
-(Add your Vercel link here)
+(https://resume-copilot-red.vercel.app/)
 
 ---
 
