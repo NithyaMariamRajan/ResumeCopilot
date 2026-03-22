@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Resume Copilot Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Resume Copilot is a simple, focused web app that helps improve resume content through a conversational interface.
 
-Currently, two official plugins are available:
+Instead of building a generic chatbot, the goal here was to create something practical — a tool that helps turn rough or basic resume points into clearer, stronger, and more impactful statements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You can paste a resume bullet, paragraph, or section, and the assistant will:
 
-## Expanding the ESLint configuration
+* Rewrite it in a clearer and more professional way
+* Provide two alternative versions (concise and impact-focused)
+* Suggest small improvements like adding metrics, tools, or stronger wording
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The experience is built around a chat interface so it feels interactive and easy to use.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Key features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Chat-style interface (not just a form)
+* Role-based context (Frontend, Backend, Product)
+* Different improvement modes (concise, impact, ATS-friendly)
+* Structured responses instead of long paragraphs
+* Copy and regenerate options for quick iteration
+
+---
+
+## Tech stack
+
+* React (with TypeScript)
+* Tailwind CSS
+* Vite
+
+The AI layer is currently mocked to simulate structured responses and keep the focus on frontend experience and usability.
+
+---
+
+## Why this project
+
+The idea was to avoid building a generic “AI chatbot” and instead design something that feels like a small, real product.
+
+A lot of resumes suffer from unclear wording or lack of impact, so this tool focuses specifically on improving that — in a way that’s fast and easy to interact with.
+
+---
+
+## Running locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Demo
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+(Add your Vercel link here)
+
+---
+
+## Note
+
+This project focuses more on product thinking and frontend experience — especially how the chatbot is presented, how responses are structured, and how small UX details improve usability.
